@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        asdf {
+            background-color: lightcoral
+        }
+    </style>
+    <title>Q2.html</title>
+    <script>
+        dict = [[마우스, 30000], [모니터, 40000], [USB, 15000], [이어폰, 90000]];
+
+        var select;
+        var list;
+        var sum;
+
+        function init() {
+            clock();
+            select = document.getElementById("product");
+            list = document.getElementById("list");
+            sum = document.getElementById("sum");
+        }
+
+        function clock() {
+            var clock = document.getElementById("clock");
+            var now = new Date();
+            var nowTime = now.getHours() + "시" + now.getMinutes() + "분" + now.getSeconds() + "초";
+            clock.innerHTML = nowTime;
+            setTimeout("clock()", 1000);
+        }
+
+        function move() {
+            var text = "선택하신 물건은 : ";
+            var total = 0;
+            for(var i = 0; i < select.length; i++) {
+                if(select.options[i].selected) {
+                    text.append(dict[i][0]);
+                    text.append(" ");
+                    total += dict[i][1];
+                }
+            }
+            list.value = text;
+            sum.value = total;
+        }
+
+    </script>
+</head>
+
+<body onload="clock()">
+    <h3>주문내역</h3>
+    <hr color="orange">
+    <table border="0" align=left cellspacing="2" cellpadding="2" >
+        <tr>
+            <th width="150">주문자명</th>
+            <td width="300">
+                <form>
+                    <input type="name" name="id">
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <th width="150" bgcolor="lightcoral">작성 시간</th>
+            <td width="300">
+                <form>
+                    <span id="clock"></span>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <th width="150">주분자 비밀번호</th>
+            <td width="300">
+                <form>
+                    <input type="password" name="id">
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <th width="150" bgcolor="lightcoral">제품 목록</th>
+            <td width="300">
+                <form>
+                    <select id="product" multiple size=4 onchange="move()">
+                        <option value="0">마우스 30,000원
+                        <option value="1">모니터 40,000원
+                        <option value="2">USB 15,000원
+                        <option value="3">이어폰 90,000원
+                    </select>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <th width="150">선택목록</th>
+            <td width="300">
+                <form>
+                    <textarea id="list" rows=10 cols=30></textarea>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <th width="150" bgcolor="lightcoral">금액</th>
+            <td width="300">
+                <form>
+                    <textarea id="sum" rows=1 cols=30></textarea>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <th width="150">
+                <input type="submit" value="확인">
+                <input type="reset" value="취소">
+            </th>
+            <td width="300">
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>프롬프트 대화상자 나타내기</title>
+    <script language="JavaScript">
+        var age = prompt("당신의 연령대는?", "나이를 입력해주세요")
+        age = parseInt(age);
+        level = age / 10;
+        level = parseInt(level);
+
+        switch (level) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                document.write('당신의 연령대는 ' + level * 10 + '대 입니다.')
+                break;
+
+            default:
+                document.write('10대에서 40대 이외의 연령대 입니다.')
+                break;
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

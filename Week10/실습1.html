@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>구구단</title>
+    <style>
+        body {
+            font-size : 25px;
+        }
+    </style>
+    <script language="JavaScript">
+        function gugudan() {
+            for (var i = 2; i <= 9; i++) {
+                document.write("<h3>" + "구구단"+ "<br>" + "[" + i + "단" + "]" + "</h3>")
+                for (var j = 1; j <= 9; j++) {
+                    document.write(i + " * " + j + " = " + i * j + "<br>");
+                }
+                document.write("<br><br>")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        gugudan()
+    </script>
+</body>
+
+</html>

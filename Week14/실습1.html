@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>사이트 접속</title>
+    <script>
+    var select;
+    var newWin = null;
+
+    function load() {
+        select = document.getElementById("site");
+    }
+
+    function move() {
+        var URL = select.options[select.selectedIndex].value;
+        if(newWin == null || newWin.closed){
+            newWin = window.open(URL, "newWin", "left=300, width=400, heigh=300");
+        }
+        else {
+            newWin.location = URL;
+        }
+    }
+    </script>
+</head>
+
+<body onload="load()">
+    <h3>옵션 선택으로 웹 사이트 접속</h3>
+    <hr>
+    사이트 선택 :
+    <select id="site" onchange="move()">
+        <option value="https://www.naver.com/">네이버
+        <option value="http://www.google.com/" selected>구글
+        <option value="https://www.daum.net/">다음
+    </select>
+
+</body>
+
+</html>

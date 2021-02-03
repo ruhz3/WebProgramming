@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>onmousemove</title>
+    <style>
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        function init() {
+            var pointer = document.getElementById("pointer");
+            window.onmousemove = function (e) {
+                pointer.style.left = e.clientX + "px";
+                pointer.style.top = e.clientY + "px";
+            }
+        }
+    </script>
+</head>
+
+<body onload=init()>
+    <h3>이미지 커서 만들기</h3>
+    <hr>
+    마우스를 움직이면 이미지로 만든 커서가 마우스를 따라 다닙니다.
+    <img id="pointer" style="position: absolute" src="spongebob.png">
+</body>
+
+</html>
