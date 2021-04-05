@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+
+/*
+Stylesheet & mhome.html
+*/
+* {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: block;
+}
+
+body {
+  background-color: #ff4500;
+}
+
+footer {
+  width: 100%;
+  color: black;
+  display: block;
+  position: fixed;
+  bottom:0;
+  text-align: center;
+  align-items: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 1px solid #d3d3d3;
+}
+
+ul {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-body {
+  background-color:#ff4500;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3em;
+  line-height: 150%;
+}
+
+#banner {
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.home_button {
+  display: block;
+  display: inline-block;
+  width: 3.5em;
+  height: 1.5em;
+  margin: 0 auto;
+  font-size: 3em;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#menu_bar {
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #d3d3d3;
+}
+.menu_button {
+  display: block;
+  display: inline-block;
+  width: 3.5em;
+  height: 1.5em;
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-bottom: 2px solid #ff4500;
+}
+#menu_button_now {
+  color: #a0a0a0;
+  border-bottom: 2px solid #a0a0a0;
+}
+
+/*
+mintro.html
+*/
+#intro-profile {
+  margin-bottom: 1em;
+  width: 10em;
+  height: 10em;
+  box-sizing: border-box;
+}
+.body_text {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*
+minfo.html
+*/
+#info-profile {
+  margin-bottom: 1em;
+  width: 25em;
+  height: 25em;
+  box-sizing: border-box;
+}
+#grid {
+  margin: auto;
+}
+
+.item {
+  width: 80%;
+}
+
+/*
+mstudy.html
+*/
+.study-block {
+  text-align: left;
+  padding-bottom: 5em;
+  padding-left: 20%;
+}
+#study-photo {
+  display: inline;
+  width: 15em;
+  height: 15em;
+  padding-top : 1em;
+  padding-bottom: 1em;
+}
+
+/*
+mcareer.html
+*/
+#table_year {
+  margin-left: 1em;
+  float: center;
+  width: 5em;
+}
+#table_content {
+  margin-left: 1em;
+  float: left;
+  width: 14em;
+}
+
+/*
+Media Query
+*/
+@media (min-width: 481px) {
+  #page_title {
+    background-color: #ff4500;
+  }
+  footer {
+    background-color: #ff4500;
+  }
+  .youtube {
+    width: 480px;
+    height: 360px;
+  }
+  .picture {
+    width: 450px;
+  }
+}
+
+/*
+Mobile
+ */
+@media (min-width: 320px) and (max-width: 480px) {
+  .youtube {
+    width: 90%;
+    height: 12em;
+  }
+}
